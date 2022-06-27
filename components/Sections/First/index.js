@@ -1,9 +1,9 @@
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import React, { useContext, useEffect } from 'react';
-import SecondaryText from '../../../components/Typography/SecondaryTitle';
-import Title from '../../../components/Typography/Title';
-import Fullscreen from '../../../components/Wrapper/Fullscreen';
+import SecondaryText from '../../Typography/SecondaryTitle';
+import Title from '../../Typography/Title';
+import Fullscreen from '../../Wrapper/Fullscreen';
 import { PortFolioContext } from '../../../store';
 
 const First = () => {
@@ -14,6 +14,7 @@ const First = () => {
       duration: 1000,
     });
   });
+  // return <h1>{myContext}</h1>;
   return (
     <Fullscreen className="flex justify-center items-center flex-col">
       <Title className="text-center" data-aos="fade-down">

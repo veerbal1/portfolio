@@ -54,7 +54,7 @@ const Context = ({ children }) => {
     });
   };
   return (
-    <PortFolioContext.Provider value={{ globalState, setGlobalLanguage }}>
+    <PortFolioContext.Provider value={{ globalState, setGlobalLanguage }} /**value="Veerbal"*/>
       {children}
     </PortFolioContext.Provider>
   );
