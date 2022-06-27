@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
-const Title = ({ children, ...props }) => {
+const Title = ({ children, className, ...props }) => {
   return (
     <h1
-      className={`font-sans text-6xl font-bold ${props.className}`}
+      className={`text-6xl font-bold ${className ? className : ''}`}
       {...props}
     >
       {children}

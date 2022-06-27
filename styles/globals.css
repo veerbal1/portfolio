@@ -19,6 +19,14 @@ body {
   font-family: Myriad-Thin;
 }
 
+.font-myriad-thin {
+  font-family: Myriad-Thin;
+}
+
+.font-myriad-regular {
+  font-family: Myriad-Regular;
+}
+
 a {
   color: inherit;
   text-decoration: none;

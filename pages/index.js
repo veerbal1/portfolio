@@ -1,15 +1,16 @@
 import Image from 'next/image';
 import Layout from '../components/Template/index';
+import Title from '../components/Typography/Title';
+import { css, cx } from '@emotion/css';
+import Fullscreen from '../components/Wrapper/Fullscreen';
+import SecondaryText from '../components/Typography/SecondaryTitle';
+import First from './Sections/First';
 
 export default function Home() {
   return (
     <Layout>
-      <div
-        className={`bg-white w-screen h-screen flex justify-center items-center`}
-      >
-        <h1>Hello People
-        </h1>
-      </div>
+      {/* First Section for name and sub-title */}
+      <First />
     </Layout>
   );
 }
