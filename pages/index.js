@@ -1,7 +1,5 @@
-import Image from "next/image";
-import Layout from "./components/Template";
-import Title from "./components/Typography/Title";
-import myImage from "../public/images/me.jpeg";
+import Image from 'next/image';
+import Layout from '../components/Template/index';
 
 export default function Home() {
   return (
@@ -9,15 +7,8 @@ export default function Home() {
       <div
         className={`bg-white w-screen h-screen flex justify-center items-center`}
       >
-        <div
-          className={`bg-image w-full h-full absolute left-16`}
-          style={{
-            backgroundImage: `url('${myImage.src}')`,
-            backgroundSize: "contain",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
-        ></div>
+        <h1>Hello People
+        </h1>
       </div>
     </Layout>
   );

@@ -1,6 +1,6 @@
 import Head from "next/head";
 import React from "react";
-import ProfileIcon from "../../../public/favicon.ico";
+import ProfileIcon from "../../public/favicon.ico";
 
 const Layout = ({ title = "Veerbal Singh", children }) => {
   return (

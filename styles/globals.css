@@ -2,12 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: Myriad-Thin;
+  src: url('../assets/fonts/MyriadPro-Light.woff');
+}
+
+@font-face {
+  font-family: Myriad-Regular;
+  src: url('../assets/fonts/MYRIADPRO-REGULAR.woff');
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Myriad-Thin;
 }
 
 a {
