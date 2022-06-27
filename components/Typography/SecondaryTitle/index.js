@@ -12,7 +12,11 @@ const SecondaryText = ({ children, className, component, ...props }) => {
       children
     );
   } else {
-    <h1 className={'text-base ' + className}>{children}</h1>;
+    return (
+      <h1 className={'text-base ' + className} {...props}>
+        {children}
+      </h1>
+    );
   }
 };
 

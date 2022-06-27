@@ -1,5 +1,5 @@
 import Aos from 'aos';
-import "aos/dist/aos.css";
+import 'aos/dist/aos.css';
 import React, { useEffect } from 'react';
 import SecondaryText from '../../../components/Typography/SecondaryTitle';
 import Title from '../../../components/Typography/Title';
@@ -16,9 +16,22 @@ const First = () => {
       <Title className="text-center" data-aos="fade-down">
         Veerbal <br /> Singh
       </Title>
-      <SecondaryText className="mt-4 text-center" component="div">
-        <h4 className="text-xl font-bold" data-aos="fade-down" data-aos-delay="50">Ideas come from</h4>
-        <h4 className="text-2xl font-bold" data-aos="fade-down" data-aos-delay="500">UNKNOWN</h4>
+      <SecondaryText
+        className="mt-2 text-xl font-bold text-center"
+        data-aos="fade-down"
+        data-aos-delay="50"
+      >
+        Front-End UI/UX Developer
+      </SecondaryText>
+      <SecondaryText data-aos="fade-down" data-aos-delay="100"  data-aos-offset="200">
+        Since Dec, 2019
+      </SecondaryText>
+      <SecondaryText
+        className="mt-2 text-xl text-center absolute bottom-0"
+        component="div"
+      >
+        <h4 className="text-sm font-bold">Ideas come from</h4>
+        <h4 className="text-lg font-bold">UNKNOWN</h4>
       </SecondaryText>
     </Fullscreen>
   );
