@@ -47,12 +47,19 @@ const LanguageSelector = () => {
         onClick={() => setOpen(!open)}
         className="flex justify-center items-center flex-col items-center"
       >
-        <img
-          className="w-5"
-          src={selectedLanguage.flag}
-          alt={selectedLanguage.country}
-        />
-        <span>{selectedLanguage.name}</span>
+        {open ? (
+          <h1 className='text-2xl'>&times;</h1>
+        ) : (
+          <>
+            {' '}
+            <img
+              className="w-5"
+              src={selectedLanguage.flag}
+              alt={selectedLanguage.country}
+            />
+            <span>{selectedLanguage.name}</span>
+          </>
+        )}
       </div>
       <div
         className={`drop-down w-24 absolute top-10 m-2 border-0 overflow-hidden right-2 transition-all ${
