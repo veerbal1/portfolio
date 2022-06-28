@@ -29,11 +29,17 @@ const languages = [
 const LanguageSelector = () => {
   const globalContext = useContext(PortFolioContext);
   const [open, setOpen] = React.useState(false);
+
   const [selectedLanguage, setSelectedLanguage] = React.useState(
     languages.find(
       (lang) => lang.name === globalContext.globalState.selectedLanguage
     )
   );
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   useEffect(() => {
     setSelectedLanguage(
       languages.find(
@@ -48,7 +54,7 @@ const LanguageSelector = () => {
         className="flex justify-center items-center flex-col items-center"
       >
         {open ? (
-          <h1 className='text-2xl'>&times;</h1>
+          <h1 className="text-2xl">&times;</h1>
         ) : (
           <>
             {' '}
@@ -72,6 +78,7 @@ const LanguageSelector = () => {
               key={index}
               {...language}
               selectedLanguage={selectedLanguage.name}
+              handleClose={handleClose}
             />
           ))}
         </ul>
@@ -80,7 +87,7 @@ const LanguageSelector = () => {
   );
 };
 
-const ListItem = ({ name, flag, country, selectedLanguage }) => {
+const ListItem = ({ name, flag, country, selectedLanguage, handleClose }) => {
   const globalContext = useContext(PortFolioContext);
   return (
     <li
@@ -89,6 +96,9 @@ const ListItem = ({ name, flag, country, selectedLanguage }) => {
       }`}
       onClick={() => {
         globalContext.setGlobalLanguage(name);
+        setTimeout(() => {
+          handleClose();
+        }, 100);
       }}
     >
       <img className="w-8" src={flag} alt={country} />
